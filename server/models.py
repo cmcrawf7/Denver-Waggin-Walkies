@@ -20,3 +20,9 @@ class User(models.Model):
     def __str__(self):
         return self.first_name
     
+class Appointment(models.Model):
+    date = models.DateField(auto_now=False, auto_now_add=False)
+    date = models.TimeField(auto_now=False, auto_now_add=False)
+    
+    def __str__(self):
+        return f"Appointment on {self.date} at {self.time}"
