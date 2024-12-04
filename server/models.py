@@ -10,16 +10,6 @@ class Dog(models.Model):
     def __str__(self):
         return self.name
     
-class User(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    email = models.EmailField()
-    phone_number = models.CharField(max_length=10)
-    address = models.CharField(max_length=100)
-    
-    def __str__(self):
-        return self.first_name
-    
 class Appointment(models.Model):
     date = models.DateField(auto_now=False, auto_now_add=False)
     date = models.TimeField(auto_now=False, auto_now_add=False)

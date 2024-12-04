@@ -3,5 +3,23 @@
 {% block title %}About Us - Denver Waggin' Walkies{% endblock %}
 
 {% block content %}
-    <p>Welcome to Denver Waggin' Walkies! This is the Login page</p>
+    <h2>Login</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Login</button>
+    </form>
+    <br>
+    
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <p>Don't have an account? <a href="{% url 'create_profile' %}">Create one</a></p>
+
 {% endblock %}

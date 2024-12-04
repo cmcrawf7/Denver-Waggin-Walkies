@@ -1,0 +1,14 @@
+{% extends 'server/base.html' %}
+
+{% block title %}Create Profile - Denver Waggin' Walkies{% endblock %}
+
+{% block content %}
+    <h2>Create Your Profile</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Create Profile</button>
+    </form>
+{% endblock %}
