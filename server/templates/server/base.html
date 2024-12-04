@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Denver Waggin' Walkies{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'server/css/styles.css' %}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1 id="main-header">Denver Waggin' Walkies</h1>
+    </header>
+
+    <!-- Main Container with Sidebar and Content -->
+    <div id="container">
+        <!-- Sidebar (Navbar) -->
+        <nav id="sidebar">
+            <ul>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content Area -->
+        <div id="content">
+            <main>
+                {% block content %}
+                <!-- Content specific to each page will go here -->
+                {% endblock %}
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Denver Waggin' Walkies</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{% static 'server/js/scripts.js' %}"></script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

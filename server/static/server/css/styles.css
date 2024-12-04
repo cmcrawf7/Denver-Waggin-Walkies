@@ -1,0 +1,83 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack header, container, and footer vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Header Style */
+header {
+    background-color: #FF96C5; /* Header background */
+    color: white; /* Header text color */
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Ensure the header spans the full width */
+
+    text-shadow: 
+        2px 2px 0px black,  /* Shadow to the right and bottom */
+        -2px -2px 0px black, /* Shadow to the left and top */
+        2px -2px 0px black,  /* Shadow to the top and right */
+        -2px 2px 0px black;  /* Shadow to the left and bottom */
+}
+
+/* Main Container Style */
+#container {
+    display: flex; /* Use flexbox to arrange sidebar and content horizontally */
+    flex: 1; /* Take up remaining space after header */
+}
+
+/* Sidebar Style */
+#sidebar {
+    width: 150px; /* Thin sidebar */
+    background-color: #8DD7BF; /* Dark background */
+    color: white; /* White text */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px;
+    height: 100%; /* Sidebar takes full height under the header */
+}
+
+#sidebar ul {
+    list-style-type: none; /* Remove bullet points */
+}
+
+#sidebar ul li {
+    margin-bottom: 15px;
+}
+
+#sidebar ul li a {
+    color: white; /* White links */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    text-shadow: 
+        1px 1px 0px black,  /* Shadow to the right and bottom */
+        -1px -1px 0px black, /* Shadow to the left and top */
+        1px -1px 0px black,  /* Shadow to the top and right */
+        -1px 1px 0px black;  /* Shadow to the left and bottom */
+}
+
+#sidebar ul li a:hover {
+    color: #4CAF50; /* Highlight color */
+}
+
+/* Content Area Style */
+#content {
+    flex: 1; /* Take up the remaining width */
+    padding: 20px;
+}
+
+/* Footer Style */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}

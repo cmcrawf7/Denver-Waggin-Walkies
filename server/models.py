@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Dogs(models.Model):
+class Dog(models.Model):
     name = models.CharField(max_length=50, null=False)
     breed = models.CharField(max_length=100, null=False)
     age = models.IntegerField()
